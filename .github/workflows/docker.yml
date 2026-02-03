@@ -21,7 +21,7 @@ jobs:
 
       - name: Login to Yandex Container Registry
         run: |
-          echo "${{ secrets.YC_SA_PRIVATE_KEY }}" | docker login \
+          echo "${{ secrets.OAUTH_TOKEN }}" | docker login \
             --username oauth \
             --password-stdin cr.yandex
 
